@@ -4,12 +4,15 @@ body {
 }
 
 ul.tab {
+   position: absolute; 
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     border: 1px solid #ccc;
     background-color: #f1f1f1;
+    z-index:10;
+    top:150px;
 }
 
 /* Float the list items side by side */
@@ -52,16 +55,53 @@ ul.tab li a:focus, .active {
 .Menu_Img_Image {
     width: 100%;
     height:200px;
-    background:#ccc;
+    
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#feffe8+0,cccccc+100 */
+background: #feffe8; /* Old browsers */
+background: -moz-radial-gradient(center, ellipse cover,  #feffe8 0%, #cccccc 100%); /* FF3.6-15 */
+background: -webkit-radial-gradient(center, ellipse cover,  #feffe8 0%,#cccccc 100%); /* Chrome10-25,Safari5.1-6 */
+background: radial-gradient(ellipse at center,  #feffe8 0%,#cccccc 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feffe8', endColorstr='#cccccc',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+z-index:2;
 }
 .Menu_Image_H2 {
    position: absolute; 
    padding:0;
-   top: -20px; 
-   right: 10px;
+   top: -35px; 
+   right: 15px;
    width: 100%;
    text-align: right;
-   font-size:40px;
-   text-shadow: 0px 0px 6px #000, 11px -31px 100px #000, 0px 0px 10px #fff;
+   font-size:50px;
    color:#fff;
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #ddd)); background-image: -webkit-linear-gradient(#ffffff,#ddd);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #fff;
+    -webkit-text-stroke: 1px #aaa;
+}
+
+details {
+    padding:10px;
+    background:#eee;
+    border: 1px solid #ddd;
+}summary::-webkit-details-marker { font-size:0px }
+summary {
+    padding:5px;   
+    font-size:25px;
+}
+summary:before {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+  content: "";
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4621/treehouse-icon-sprite.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+.Button_Donation {
+    position:absolite;
+    top:5px;
+    right:0;
+    padding:10px;
 }
